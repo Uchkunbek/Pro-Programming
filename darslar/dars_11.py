@@ -51,7 +51,7 @@
 #     i += 2
 # print(jami)
 
-# 4. While orqali ro'yxatdagi 2-eng katta sonni topuvchi dastur yozing
+# 4. While orqali ro'yxatdagi eng katta sonni topuvchi dastur yozing
 
 # son = []
 # i=1
@@ -70,3 +70,22 @@
 # print(eng_katta)
 
 # print(max(sonlar))
+
+# Listdagi ikkinchi eng katta sonni topish
+
+sonlar = [3, 8, 2, 15, 7, 56, 58]
+
+eng_katta = sonlar[0]
+ikkinchi = sonlar[0]
+i = 1
+
+while i < len(sonlar):
+    if sonlar[i] > eng_katta:
+        ikkinchi = sonlar[i]
+        eng_katta = sonlar[i]
+    elif ikkinchi < sonlar[i] and ikkinchi < eng_katta:
+        ikkinchi = sonlar[i]
+    i += 1
+
+print(eng_katta)
+print(ikkinchi)
