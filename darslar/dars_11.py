@@ -73,19 +73,20 @@
 
 # Listdagi ikkinchi eng katta sonni topish
 
-sonlar = [3, 8, 2, 15, 7, 56, 58]
+# sonlar = [3, 8, 2, 15, 7, 56, 58]
+#
+# eng_katta = sonlar[0]
+# ikkinchi = sonlar[0]
+# i = 0
+#
+# while i < len(sonlar):
+#     if sonlar[i] > eng_katta:
+#         ikkinchi = eng_katta
+#         eng_katta = sonlar[i]
+#     elif ikkinchi > sonlar[i] and ikkinchi < eng_katta:
+#         ikkinchi = sonlar[i]
+#     i += 1
+#
+# print(eng_katta)
+# print(ikkinchi)
 
-eng_katta = sonlar[0]
-ikkinchi = sonlar[0]
-i = 1
-
-while i < len(sonlar):
-    if sonlar[i] > eng_katta:
-        ikkinchi = sonlar[i]
-        eng_katta = sonlar[i]
-    elif ikkinchi < sonlar[i] and ikkinchi < eng_katta:
-        ikkinchi = sonlar[i]
-    i += 1
-
-print(eng_katta)
-print(ikkinchi)
