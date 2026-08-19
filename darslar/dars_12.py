@@ -121,3 +121,7 @@
 #   Listning elementlar yig'indisi = 32
 
 
+# def list_sum(my_list):
+#     return sum(my_list)
+#
+# print(list_sum([1,2,3,4,5]))
