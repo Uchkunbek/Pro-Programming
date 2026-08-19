@@ -119,3 +119,5 @@
 # uni ichida esa myList elementlarini yig'indisini print qilasizlar.
 #
 #   Listning elementlar yig'indisi = 32
+
+
