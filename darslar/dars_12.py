@@ -34,3 +34,60 @@
 # print(a.isdecimal())
 # print(b.isdecimal())
 
+
+# 1. "user_data" funksiyasini elon qilasizlar.
+# Funksiyani 3 ta parametri bor (first_name, last_name, age).
+# Input orqalik ism, familiya va yoshni kiritamiz.
+# va bu bu qiymatlarni "user_data" funksiyasini chaqirib argumentlariga beramiz.
+# "user_data" funksiyasi bu (first_name, last_name, age) o'zgaruvchilarni qiymatini
+#
+#   Ism: Alisher
+#   Familiya: Olimov
+#   Yosh: 27
+#
+# ko'rinishiga print qilib bersin.
+
+def user_data(first_name, last_name, age):
+    print(f"""
+    ----Siz haqingizda ma'lumot-----
+                
+        First Name: {first_name}
+        Last name: {last_name} 
+        Age: {age}
+        
+    ====== R A H M A T =======
+    
+""")
+
+# Tekshirib ko'ramiz
+print(user_data('Uchqun', 'Ashirov', 39))
+
+
+
+
+# 2. "find_max" funksiyasini elon qilasizlar.
+# Funksiyani 3 ta parametri bor (a, b, c).
+# Input orqalik 3 ta son kiritamiz.
+# va bu sonlarni "find_max" funksiyasi chaqirib argumentlariga beramiz.
+# "find_max" funksiyasini bu (a, b, c) o'zgaruvchilardan eng kattasini
+# topib print qiladi.
+#
+#   Eng katta son - A = 10
+#   yoki
+#   Eng katta son - A va B = 10
+#   yoki
+#   Eng katta son - A va B va C = 10
+
+def find_max(a, b, c):
+    if a >= b and a >= c:
+        return f"Eng katta son - A = {a}"
+    elif b >= a and b >= c:
+        return f"Eng katta son - B = {b}"
+    else:
+        return f"Eng katta son - C = {c}"
+
+# Tekshirib ko'ramiz:
+print(find_max(10, 30, 6))  # Natija: Eng katta son - A = 10
+
+
+
