@@ -47,20 +47,20 @@
 #
 # ko'rinishiga print qilib bersin.
 
-def user_data(first_name, last_name, age):
-    print(f"""
-    ----Siz haqingizda ma'lumot-----
-                
-        First Name: {first_name}
-        Last name: {last_name} 
-        Age: {age}
-        
-    ====== R A H M A T =======
-    
-""")
-
-# Tekshirib ko'ramiz
-print(user_data('Uchqun', 'Ashirov', 39))
+# def user_data(first_name, last_name, age):
+#     print(f"""
+#     ----Siz haqingizda ma'lumot-----
+#
+#         First Name: {first_name}
+#         Last name: {last_name}
+#         Age: {age}
+#
+#     ====== R A H M A T =======
+#
+# """)
+#
+# # Tekshirib ko'ramiz
+# print(user_data('Uchqun', 'Ashirov', 39))
 
 
 
@@ -78,16 +78,44 @@ print(user_data('Uchqun', 'Ashirov', 39))
 #   yoki
 #   Eng katta son - A va B va C = 10
 
-def find_max(a, b, c):
-    if a >= b and a >= c:
-        return f"Eng katta son - A = {a}"
-    elif b >= a and b >= c:
-        return f"Eng katta son - B = {b}"
-    else:
-        return f"Eng katta son - C = {c}"
+# def find_max(a, b, c):
+#     if a >= b and a >= c:
+#         return f"Eng katta son - A = {a}"
+#     elif b >= a and b >= c:
+#         return f"Eng katta son - B = {b}"
+#     else:
+#         return f"Eng katta son - C = {c}"
+#
+# # Tekshirib ko'ramiz:
+# print(find_max(10, 30, 6))  # Natija: Eng katta son - A = 10
 
-# Tekshirib ko'ramiz:
-print(find_max(10, 30, 6))  # Natija: Eng katta son - A = 10
+# 3. "find_letter_count" funksiyasini elon qilasizlar.
+# Funksiyani 2 ta parametri bor (word, letter).
+# Input orqalik so'z kiritamiz, keyin esa shu so'zda qidirmoqchi bolgan so'zimizni kiritamiz.
+# va bu qiymatlarni "find_letter_count" funksiyasini chaqirib argumentlariga beramiz.
+# "find_letter_count" funksiyasi bu (word, letter) o'garuvchilardan foydalanib
+# "word" da "letter" nechi martda qatnashganini print qilsin.
+# "Programing" so'zida "r" dan 2 ta.
+
+# def find_letter_cont(word, harf):
+#     soni = []
+#     for i in word:
+#         soni.append(i)
+#     return soni.count(harf)
+#
+# print(find_letter_cont('saalommm', 'm'))
+
+# 2-variant
+
+# def find_letter_cont(word, harf):
+#     return word.count(harf)
+#
+# print(find_letter_cont('Assalomu Alaykum', 'k'))
 
 
-
+# 4. "list_sum" funksiyasi elon qilasizlar.
+# Funksiyani 1 ta pametrni bor (myList).
+# "myList" funksiyasini chaqirib unda argumentini berasizlar.
+# uni ichida esa myList elementlarini yig'indisini print qilasizlar.
+#
+#   Listning elementlar yig'indisi = 32
