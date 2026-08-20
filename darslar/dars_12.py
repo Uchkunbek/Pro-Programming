@@ -152,8 +152,9 @@ def digit_count_and_sum(word):
     return f"So'zdagi raqamlar soni {len(jami)} ta, raqamlar yig'indisi esa {sum(jami)} ga teng."
 
 #endi funksiyani sinab ko'ramiz
-sinov = digit_count_and_sum('fifa2026')
+sinov = digit_count_and_sum('fifa2026usa3')
 print(sinov)
+
 
 
 
