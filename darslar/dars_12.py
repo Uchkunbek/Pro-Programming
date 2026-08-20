@@ -143,23 +143,30 @@
 # 7. digit_count_and_sum(word) - bu funksiya "word" ni ichidagi raqamni aniqlab ularni
 # yig'indisini va nechtaligini print qilsin.
 
-def digit_count_and_sum(word):
-    jami = []
-    for belgi in word:
-        if belgi.isdigit():
-            jami.append(int(belgi))
-
-    return f"So'zdagi raqamlar soni {len(jami)} ta, raqamlar yig'indisi esa {sum(jami)} ga teng."
-
-#endi funksiyani sinab ko'ramiz
-sinov = digit_count_and_sum('fifa2026usa3')
-print(sinov)
+# def digit_count_and_sum(word):
+#     jami = []
+#     for belgi in word:
+#         if belgi.isdigit():
+#             jami.append(int(belgi))
+#
+#     return f"So'zdagi raqamlar soni {len(jami)} ta, raqamlar yig'indisi esa {sum(jami)} ga teng."
+#
+# #endi funksiyani sinab ko'ramiz
+# sinov = digit_count_and_sum('fifa2026usa3')
+# print(sinov)
 
 
 
 
 # 8. add_right(a, b) - bu funksiya a sonini o'ng tomoniga b sonini birlashtirib qoysin va print qilsin.
-#
+def add_right(a,b):
+    revers = f'{a}{b}'
+    print(revers)
+
+add_right(12,23)
+
+
+
 # 9. add_left(a, b) - bu funksiya a sonini chap tomoniga b sonini birlashtirib qoysin va print qilsin.
 #
 # 10. work_with_list(a) - bu funksiya a listdan eng kichik sonni topib list elementlariga ko'paytirib qiymatini o'zgartiradi va listni print qilsin.
