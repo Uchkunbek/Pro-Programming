@@ -124,4 +124,34 @@
 # def list_sum(my_list):
 #     return sum(my_list)
 #
-# print(list_sum([1,2,3,4,5]))
+# print(list_sum([1,5,5,5,5]))
+
+# 5. daraja(a, b) - bu funksiya a ni b darajasini print qilsin.
+def daraja(a,b):
+    return a**b
+
+print(daraja(2,5))
+
+
+
+# 6. daraja4(a, b, c, d) - bu funksiya a ni b, c va d chi darajasini print qilsin.
+#
+# 7. digit_count_and_sum(word) - bu funksiya "word" ni ichidagi raqamni aniqlab ularni yig'indisini va nechtaligini print qilsin.
+#
+# 8. add_right(a, b) - bu funksiya a sonini o'ng tomoniga b sonini birlashtirib qoysin va print qilsin.
+#
+# 9. add_left(a, b) - bu funksiya a sonini chap tomoniga b sonini birlashtirib qoysin va print qilsin.
+#
+# 10. work_with_list(a) - bu funksiya a listdan eng kichik sonni topib list elementlariga ko'paytirib qiymatini o'zgartiradi va listni print qilsin.
+#
+# 11. big_sales(sales) funksiyasini yarating.
+# sales bu dictionary:
+# {
+#   "yanvar": 12000,
+#   "mart": 6000,
+#   "aprel": 15000,
+#   "sentabr": 9000,
+#   "dekabr": 10000,
+# }
+#
+# qaysi oyda eng ko'p sotuv bolgan bo'lganini return qilsin.
