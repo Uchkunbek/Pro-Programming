@@ -134,13 +134,29 @@
 
 
 # 6. daraja4(a, b, c, d) - bu funksiya a ni b, c va d chi darajasini print qilsin.
-def daraja4(a,b,c,d):
-    return a**b, a**c, a**d
-
-print(daraja4(2,2,3,4))
-
-# 7. digit_count_and_sum(word) - bu funksiya "word" ni ichidagi raqamni aniqlab ularni yig'indisini va nechtaligini print qilsin.
+# def daraja4(a,b,c,d):
+#     return a**b, a**c, a**d
 #
+# print(daraja4(2,2,3,100))
+
+
+# 7. digit_count_and_sum(word) - bu funksiya "word" ni ichidagi raqamni aniqlab ularni
+# yig'indisini va nechtaligini print qilsin.
+
+def digit_count_and_sum(word):
+    jami = []
+    for belgi in word:
+        if belgi.isdigit():
+            jami.append(int(belgi))
+
+    return f"So'zdagi raqamlar soni {len(jami)} ta, raqamlar yig'indisi esa {sum(jami)} ga teng."
+
+#endi funksiyani sinab ko'ramiz
+sinov = digit_count_and_sum('fifa2026')
+print(sinov)
+
+
+
 # 8. add_right(a, b) - bu funksiya a sonini o'ng tomoniga b sonini birlashtirib qoysin va print qilsin.
 #
 # 9. add_left(a, b) - bu funksiya a sonini chap tomoniga b sonini birlashtirib qoysin va print qilsin.
