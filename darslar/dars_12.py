@@ -159,18 +159,33 @@
 
 
 # 8. add_right(a, b) - bu funksiya a sonini o'ng tomoniga b sonini birlashtirib qoysin va print qilsin.
-def add_right(a,b):
-    revers = f'{a}{b}'
-    print(revers)
-
-add_right(12,23)
+# def add_right(a,b):
+#     revers = f'{a}{b}'
+#     print(revers)
+#
+# add_right(12,23)
 
 
 
 # 9. add_left(a, b) - bu funksiya a sonini chap tomoniga b sonini birlashtirib qoysin va print qilsin.
 #
-# 10. work_with_list(a) - bu funksiya a listdan eng kichik sonni topib list elementlariga ko'paytirib qiymatini o'zgartiradi va listni print qilsin.
+# def add_left(a,b):
+#     return f"{b}{a}"
 #
+# print(add_left(90,88))
+
+# 10. work_with_list(a) - bu funksiya a listdan eng kichik sonni topib list elementlariga ko'paytirib qiymatini o'zgartiradi va listni print qilsin.
+
+def work_with_list(a):
+     x = min(a)
+     yangi_list = []
+     for i in list(a):
+        kupaytma = i*x
+        yangi_list.append(kupaytma)
+     return yangi_list
+
+print(work_with_list([5,2,3,4,5]))
+
 # 11. big_sales(sales) funksiyasini yarating.
 # sales bu dictionary:
 # {
@@ -182,3 +197,19 @@ add_right(12,23)
 # }
 #
 # qaysi oyda eng ko'p sotuv bolgan bo'lganini return qilsin.
+
+
+# a = {"x": 10, "y": 20}
+# b = {"y": 5, "z": 7}
+#
+# # natija = a.copy()   # avval a ni nusxalab olamiz
+#
+# for key in b:
+#     if key in a:      # kalit natijada bormi?
+#         a[key] = a[key] + b[key]
+#     else:
+#         a[key] = b[key]
+#
+# print(a)
+
+# natija: {"x": 10, "y": 25, "z": 7}
