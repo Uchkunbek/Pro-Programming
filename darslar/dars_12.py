@@ -1,4 +1,5 @@
 #Funksiyalar
+from os import name
 
 # sales =    {
 # "yanar": 16000,
@@ -176,15 +177,15 @@
 
 # 10. work_with_list(a) - bu funksiya a listdan eng kichik sonni topib list elementlariga ko'paytirib qiymatini o'zgartiradi va listni print qilsin.
 
-def work_with_list(a):
-     x = min(a)
-     yangi_list = []
-     for i in list(a):
-        kupaytma = i*x
-        yangi_list.append(kupaytma)
-     return yangi_list
-
-print(work_with_list([5,2,3,4,5]))
+# def work_with_list(a):
+#      x = min(a)
+#      yangi_list = []
+#      for i in list(a):
+#         kupaytma = i*x
+#         yangi_list.append(kupaytma)
+#      return yangi_list
+#
+# print(work_with_list([5,2,3,4,5]))
 
 # 11. big_sales(sales) funksiyasini yarating.
 # sales bu dictionary:
@@ -195,21 +196,93 @@ print(work_with_list([5,2,3,4,5]))
 #   "sentabr": 9000,
 #   "dekabr": 10000,
 # }
-#
+
 # qaysi oyda eng ko'p sotuv bolgan bo'lganini return qilsin.
 
+# sales= {
+#   "yanvar": 12000,
+#   "mart": 6000,
+#   "aprel": 15000,
+#   "sentabr": 9000,
+#   "dekabr": 10000,
+# }
+#
+# def big_sales_(sales):
+#      return max(sales, key=sales.get)
+#
+# print(big_sales_(sales))
 
-# a = {"x": 10, "y": 20}
-# b = {"y": 5, "z": 7}
+
+# 12. min_max(numbers, max_num, min_num) max_num numbers ichigagi eng katta sonmi yoki yoqmi shuni aniqlang,
+# min_num numbers ichigagi eng kichik sonmi yoki yoqmi shuni aniqlang
+
+# sonlar = [6,7,4,8,23,3,9]
 #
-# # natija = a.copy()   # avval a ni nusxalab olamiz
-#
-# for key in b:
-#     if key in a:      # kalit natijada bormi?
-#         a[key] = a[key] + b[key]
+# def min_max(numbers, max_num, min_num):
+#     real_max = max(numbers)
+#     real_min = min(numbers)
+#     if real_max == max_num and real_min == min_num:
+#         return f"Ha, {max_num} va {min_num} haqiqatdan ham listagi  eng katta va eng kichik sonlar!"
+#     elif real_max == max_num:
+#         return f"Faqat, {max_num} haqiqatdan ham list ichidagi eng katta son!"
+#     elif real_min == min_num:
+#         return f"Faqat, {min_num} haqiqatdan ham list ichidagi eng kichik son!"
 #     else:
-#         a[key] = b[key]
+#         return f"Berilgan sonlar listdagi eng katta va eng kichik emas!"
 #
-# print(a)
+# print(min_max(sonlar, 23, 3))
 
-# natija: {"x": 10, "y": 25, "z": 7}
+# 13. expensiveProduct(products) - funksiyadagi products - list.
+# Unga products sifatida [
+#   {
+#     "name": "Iphone X",
+#     "price": 600
+#   },
+#   {
+#     "name": "Iphone 12",
+#     "price": 1500
+#   },
+#   {
+#     "name": "Samsung Note 9",
+#     "price": 800
+#   },
+#   {
+#     "name": "Samsung S10",
+#     "price": 1100
+#   },
+# ] shunaqa qiymat beriladi.
+# Eng qimmat telefon nomini print qilib bersin bu funksiya.
+
+# data =[
+#   {
+#     "name": "Iphone X",
+#     "price": 600
+#   },
+#   {
+#     "name": "Iphone 12",
+#     "price": 1500
+#   },
+#   {
+#     "name": "Samsung Note 9",
+#     "price": 800
+#   },
+#   {
+#     "name": "Samsung S10",
+#     "price": 1100
+#   },
+# ]
+#
+# def expensiveProduct(product):
+#     if not product:
+#         return None
+#     for lugate in product:
+#         max_item = product[0]  # Birinchi elementni eng qimmat deb olamiz
+#         for lugat in product:
+#             if lugat["price"] > max_item["price"]:
+#                 max_item = lugat
+#         return f"Eng qimmat mahsulot: {max_item["name"]} "
+#
+#
+# print(expensiveProduct(data))
+
+
