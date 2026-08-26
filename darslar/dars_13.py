@@ -75,7 +75,6 @@ def contact():
         "vali": "+998919876543",
         "sardor": "+998935554433"
     }
-    print(contactlar.keys())
 
     # Vazifalar uchun alohida kichik funksiyalar
     def add_contact():
