@@ -68,81 +68,87 @@
 # M: contacts = {"Nodir":"+998918602711", "Laziz":"+998908002534"}
 
 
-def contact():
-    # Kontaktlar uchun lug'at yaratib olamiz
-    contactlar = {
-        "ali": "+998901234567",
-        "vali": "+998919876543",
-        "sardor": "+998935554433"
-    }
-
-    # Vazifalar uchun alohida kichik funksiyalar
-    def add_contact():
-        ism = input('Ism kiriting: ')
-        number = int(input('Telefon number kiriting (+998): '))
-        contactlar.update({ism: number})
-        return f"Yangi kontakt qo'shildi: {contactlar} "
-
-    def find_contact():
-        search = input('Ism yoki Tel number kiriting: ').strip().lower()
-
-        # 1. Ism bo'yicha qidirish (Kalit bo'yicha - O(1))
-        if search in contactlar:
-            return f"{search.title()}ning raqami: {contactlar[search]}"
-
-        # 2. Raqam bo'yicha qidirish (Qiymat bo'yicha - O(n))
-        for ism, number in contactlar.items():
-            if search in number:
-                return f"{number} raqami {ism.title()}ga tegishli"
-
-        return "Bunday ma'lumot topilmadi"
-
-    def update_contact():
-        ism = input('Ism kiriting: ')
-        number = int(input('Telefon number kiriting (+998): '))
-        contactlar[ism] = number
-        return f"{ism.title()}ning telefon nomeri {contactlar[ism]} ga yangilandi:  "
-
-    def del_contact():
-        ism = input('O\'chirmoqchi bo\'lgan ismingizni kiriting: ').strip().lower()
-
-        # Avval ism lug'atda bor-yo'qligini tekshiramiz
-        if ism in contactlar:
-            uchirilgan_raqam = contactlar.pop(ism)  # pop() o'chiradi VA o'chgan qiymatni qaytaradi
-            return f"{ism.title()} ({uchirilgan_raqam}) kontaktlardan o'chirildi."
-        else:
-            return f"{ism.title()} ismli kontakt topilmadi."
-
-    # Funksiyalarning o'zini lug'atga bog'laymiz (murojaatsiz, ya'ni () qo'ymasdan)
-    options = {
-        "1": add_contact,
-        "2": find_contact,
-        "3": update_contact,
-        "4": del_contact
-    }
-
-    print("--- KONTAKTLAR ---")
-    print("1. Kontakt qo'shish\n2. Kontakt izlash\n3. Kontaktni o'zgartirish \n4. O'chirish")
-
-    user_input = input("Tanlovingizni kiriting (1-4): ")
-
-    # Lug'atdan funksiyani olamiz va () bilan chaqiramiz
-    bajariladigan_funksiya = options.get(user_input)
-
-    if bajariladigan_funksiya:
-        return bajariladigan_funksiya()
-    else:
-        return "Xato: Bunday option mavjud emas!"
-
-
-print(contact())
+# def contact():
+#     # Kontaktlar uchun lug'at yaratib olamiz
+#     contactlar = {
+#         "ali": "+998901234567",
+#         "vali": "+998919876543",
+#         "sardor": "+998935554433"
+#     }
+#
+#     # Vazifalar uchun alohida kichik funksiyalar
+#     def add_contact():
+#         ism = input('Ism kiriting: ')
+#         number = int(input('Telefon number kiriting (+998): '))
+#         contactlar.update({ism: number})
+#         return f"Yangi kontakt qo'shildi: {contactlar} "
+#
+#     def find_contact():
+#         search = input('Ism yoki Tel number kiriting: ').strip().lower()
+#
+#         # 1. Ism bo'yicha qidirish (Kalit bo'yicha - O(1))
+#         if search in contactlar:
+#             return f"{search.title()}ning raqami: {contactlar[search]}"
+#
+#         # 2. Raqam bo'yicha qidirish (Qiymat bo'yicha - O(n))
+#         for ism, number in contactlar.items():
+#             if search in number:
+#                 return f"{number} raqami {ism.title()}ga tegishli"
+#
+#         return "Bunday ma'lumot topilmadi"
+#
+#     def update_contact():
+#         ism = input('Ism kiriting: ')
+#         number = int(input('Telefon number kiriting (+998): '))
+#         contactlar[ism] = number
+#         return f"{ism.title()}ning telefon nomeri {contactlar[ism]} ga yangilandi:  "
+#
+#     def del_contact():
+#         ism = input('O\'chirmoqchi bo\'lgan ismingizni kiriting: ').strip().lower()
+#
+#         # Avval ism lug'atda bor-yo'qligini tekshiramiz
+#         if ism in contactlar:
+#             uchirilgan_raqam = contactlar.pop(ism)  # pop() o'chiradi VA o'chgan qiymatni qaytaradi
+#             return f"{ism.title()} ({uchirilgan_raqam}) kontaktlardan o'chirildi."
+#         else:
+#             return f"{ism.title()} ismli kontakt topilmadi."
+#
+#     # Funksiyalarning o'zini lug'atga bog'laymiz (murojaatsiz, ya'ni () qo'ymasdan)
+#     options = {
+#         "1": add_contact,
+#         "2": find_contact,
+#         "3": update_contact,
+#         "4": del_contact
+#     }
+#
+#     print("--- KONTAKTLAR ---")
+#     print("1. Kontakt qo'shish\n2. Kontakt izlash\n3. Kontaktni o'zgartirish \n4. O'chirish")
+#
+#     user_input = input("Tanlovingizni kiriting (1-4): ")
+#
+#     # Lug'atdan funksiyani olamiz va () bilan chaqiramiz
+#     bajariladigan_funksiya = options.get(user_input)
+#
+#     if bajariladigan_funksiya:
+#         return bajariladigan_funksiya()
+#     else:
+#         return "Xato: Bunday option mavjud emas!"
+#
+#
+# print(contact())
 
 #
 # 4. Raqamlar ro'yxatini oladigan va ro'yxatdagi har bir raqamning takrorlanish sonini o'z ichiga
 # olgan dict qaytaradigan counter_dict(nums) nomli funksiya yozing.
 # M: counter_dict([2,1,1,1) -> {2:1, 1:3} Chunki listda 1ta 2 va 3ta 1bor.
-#
-#
+
+from collections import Counter
+
+def counter_dict(iterable):
+    return Counter(iterable)
+
+print(counter_dict([1,2,2,2,2,2,3,2,2,2,3,3,3,4,4]))
+
 # 5. Ballar dict ni(kalit = talaba nomi, qiymat = ball) parametr sifatida oladigan va eng yaxshi ikkita
 # o'quvchining ismlari ro'yxatini qaytaradigan max_ball_students(talabalar) funksiya yozing.
 # max_ball_students({"Akmal":64, "Tohir":55, "Nodir":76, "Zafar":80 }) -> {"Zafar":80, "Nodir":76}
