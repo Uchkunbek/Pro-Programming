@@ -1,4 +1,5 @@
-#Funksiyalar
+# Funksiyalar
+from os import name
 
 # sales =    {
 # "yanar": 16000,
@@ -13,7 +14,7 @@
 # yuqori_oy = max_oy(sales)
 # print(yuqori_oy)
 
-#1.Berilgan ro‘yxatdan barcha juft sonlarni o‘chirib tashlang (faqat remove yoki pop ishlatib):
+# 1.Berilgan ro‘yxatdan barcha juft sonlarni o‘chirib tashlang (faqat remove yoki pop ishlatib):
 
 # sonlar = [1, 2, 3, 3,2, 4, 5, 6, 7, 8, 9, 10,11, 14,78,7,9]
 
@@ -21,8 +22,8 @@
 
 # for i in range( 0,len(sonlar), 2):   # orqadan oldinga
 #     print(sonlar[i])
-    # if sonlar[i] % 2 == 0:
-    #     sonlar.pop(i)          # yoki sonlar.remove(sonlar[i])
+# if sonlar[i] % 2 == 0:
+#     sonlar.pop(i)          # yoki sonlar.remove(sonlar[i])
 
 
 # print(len(sonlar))
@@ -40,29 +41,27 @@
 # Input orqalik ism, familiya va yoshni kiritamiz.
 # va bu bu qiymatlarni "user_data" funksiyasini chaqirib argumentlariga beramiz.
 # "user_data" funksiyasi bu (first_name, last_name, age) o'zgaruvchilarni qiymatini
-#
+# #
 #   Ism: Alisher
 #   Familiya: Olimov
 #   Yosh: 27
 #
 # ko'rinishiga print qilib bersin.
-
+# 1-mashq
 # def user_data(first_name, last_name, age):
-#     print(f"""
+#     return (f"""
 #     ----Siz haqingizda ma'lumot-----
 #
 #         First Name: {first_name}
 #         Last name: {last_name}
 #         Age: {age}
 #
-#     ====== R A H M A T =======
+#     ====== R A H M A T ! =======
 #
 # """)
 #
 # # Tekshirib ko'ramiz
 # print(user_data('Uchqun', 'Ashirov', 39))
-
-
 
 
 # 2. "find_max" funksiyasini elon qilasizlar.
@@ -71,12 +70,12 @@
 # va bu sonlarni "find_max" funksiyasi chaqirib argumentlariga beramiz.
 # "find_max" funksiyasini bu (a, b, c) o'zgaruvchilardan eng kattasini
 # topib print qiladi.
-#
-#   Eng katta son - A = 10
-#   yoki
-#   Eng katta son - A va B = 10
-#   yoki
-#   Eng katta son - A va B va C = 10
+
+# Eng katta son - A = 10
+# yoki
+# Eng katta son - A va B = 10
+# yoki
+# Eng katta son - A va B va C = 10
 
 # def find_max(a, b, c):
 #     if a >= b and a >= c:
@@ -87,7 +86,7 @@
 #         return f"Eng katta son - C = {c}"
 #
 # # Tekshirib ko'ramiz:
-# print(find_max(10, 30, 6))  # Natija: Eng katta son - A = 10
+# print(find_max(10, 30, 6))
 
 # 3. "find_letter_count" funksiyasini elon qilasizlar.
 # Funksiyani 2 ta parametri bor (word, letter).
@@ -104,9 +103,9 @@
 #     return soni.count(harf)
 #
 # print(find_letter_cont('saalommm', 'm'))
-
-# 2-variant
-
+#
+# # 2-variant
+#
 # def find_letter_cont(word, harf):
 #     return word.count(harf)
 #
@@ -124,4 +123,170 @@
 # def list_sum(my_list):
 #     return sum(my_list)
 #
-# print(list_sum([1,2,3,4,5]))
+# print(list_sum([1,5,5,5,5]))
+
+# 5. daraja(a, b) - bu funksiya a ni b darajasini print qilsin.
+# def daraja(a,b):
+#     return a**b
+#
+# print(daraja(2,5))
+
+
+# 6. daraja4(a, b, c, d) - bu funksiya a ni b, c va d chi darajasini print qilsin.
+# def daraja4(a,b,c,d):
+#     return a**b, a**c, a**d
+#
+# print(daraja4(2,2,3,100))
+
+
+# 7. digit_count_and_sum(word) - bu funksiya "word" ni ichidagi raqamni aniqlab ularni
+# yig'indisini va nechtaligini print qilsin.
+
+# def digit_count_and_sum(word):
+#     jami = []
+#     for belgi in word:
+#         if belgi.isdigit():
+#             jami.append(int(belgi))
+#
+#     return f"So'zdagi raqamlar soni {len(jami)} ta, raqamlar yig'indisi esa {sum(jami)} ga teng."
+#
+# #endi funksiyani sinab ko'ramiz
+# sinov = digit_count_and_sum('fifa2026usa3')
+# print(sinov)
+
+
+# 8. add_right(a, b) - bu funksiya a sonini o'ng tomoniga b sonini birlashtirib qoysin va print qilsin.
+# def add_right(a,b):
+#     revers = f'{a}{b}'
+#     print(revers)
+#
+# add_right(12,23)
+
+
+# 9. add_left(a, b) - bu funksiya a sonini chap tomoniga b sonini birlashtirib qoysin va print qilsin.
+
+# def add_left(a,b):
+#     return f"{b}{a}"
+#
+# print(add_left(90,88))
+
+# 10. work_with_list(a) - bu funksiya a listdan eng kichik sonni topib list elementlariga
+# ko'paytirib qiymatini o'zgartiradi va listni print qilsin.
+
+# def work_with_list(a):
+#      x = min(a)
+#      yangi_list = []
+#      for i in list(a):
+#         kupaytma = i*x
+#         yangi_list.append(kupaytma)
+#      return yangi_list
+#
+# print(work_with_list([5,2,3,4,5]))
+
+# 2-variant
+
+# def work_with_list(a):
+#     x=min(a)
+#     for i in range(len(a)): #range list uzunligi midoricha aylanadi
+#         a[i]*=x
+#     return a
+#
+# print(work_with_list([5,2,3,4,5]))
+
+# 11. big_sales(sales) funksiyasini yarating.
+# sales bu dictionary:
+# {
+#   "yanvar": 12000,
+#   "mart": 6000,
+#   "aprel": 15000,
+#   "sentabr": 9000,
+#   "dekabr": 10000,
+# }
+# qaysi oyda eng ko'p sotuv bolgan bo'lganini return qilsin.
+
+# sales= {
+#   "yanvar": 12000,
+#   "mart": 6000,
+#   "aprel": 15000,
+#   "sentabr": 9000,
+#   "dekabr": 10000,
+# }
+#
+# def big_sales_(sales):
+#      return max(sales, key=sales.get)
+#
+# print(big_sales_(sales))
+
+
+# 12. min_max(numbers, max_num, min_num) max_num numbers ichigagi eng katta sonmi yoki yoqmi shuni aniqlang,
+# min_num numbers ichigagi eng kichik sonmi yoki yoqmi shuni aniqlang
+
+# sonlar = [6,7,4,8,23,3,9]
+#
+# def min_max(numbers, max_num, min_num):
+#     real_max = max(numbers)
+#     real_min = min(numbers)
+#     if real_max == max_num and real_min == min_num:
+#         return f"Ha, {max_num} va {min_num} haqiqatdan ham listagi  eng katta va eng kichik sonlar!"
+#     elif real_max == max_num:
+#         return f"Faqat, {max_num} haqiqatdan ham list ichidagi eng katta son!"
+#     elif real_min == min_num:
+#         return f"Faqat, {min_num} haqiqatdan ham list ichidagi eng kichik son!"
+#     else:
+#         return f"Berilgan sonlar listdagi eng katta va eng kichik emas!"
+#
+# print(min_max(sonlar, 23, 3))
+
+# 13. expensiveProduct(products) - funksiyadagi products - list.
+# Unga products sifatida [
+#   {
+#     "name": "Iphone X",
+#     "price": 600
+#   },
+#   {
+#     "name": "Iphone 12",
+#     "price": 1500
+#   },
+#   {
+#     "name": "Samsung Note 9",
+#     "price": 800
+#   },
+#   {
+#     "name": "Samsung S10",
+#     "price": 1100
+#   },
+# ] shunaqa qiymat beriladi.
+# Eng qimmat telefon nomini print qilib bersin bu funksiya.
+
+# data = [
+#     {
+#         "name": "Iphone X",
+#         "price": 600
+#     },
+#     {
+#         "name": "Iphone 12",
+#         "price": 1500
+#     },
+#     {
+#         "name": "Samsung Note 9",
+#         "price": 8000
+#     },
+#     {
+#         "name": "Samsung S10",
+#         "price": 11000
+#     },
+# ]
+#
+#
+# # 13-mashq
+# def expensiveProduct(product):
+#     if not product:
+#         return None
+#     max_item = product[0]  # Birinchi elementni eng qimmat deb olamiz
+#     for lugat in product:
+#         if lugat["price"] > max_item["price"]:
+#             max_item = lugat
+#     return f"Eng qimmat mahsulot: {max_item["name"]} "
+#
+#
+# print(expensiveProduct({}))
