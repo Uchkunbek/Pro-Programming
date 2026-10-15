@@ -1,6 +1,6 @@
 {
     "Uchqun": {
-        "games_played": 6,
+        "games_played": 7,
         "best_score": 9
     },
     "Berkin": {
@@ -10,5 +10,9 @@
     "Olim": {
         "games_played": 3,
         "best_score": 7
+    },
+    "Baxtiyor": {
+        "games_played": 1,
+        "best_score": 4
     }
 }
